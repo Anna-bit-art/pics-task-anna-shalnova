@@ -1,0 +1,137 @@
+.App {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    min-height: 600px;
+    margin: 150px auto;
+    gap: 30px;
+    padding: 50px 0;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid rgb(233, 230, 229);
+    color: rgb(70, 70, 70);
+    text-shadow: rgb(124, 124, 124);
+    box-shadow: 0 4px 35px rgba(168, 172, 176, 0.19);
+    background: rgb(140, 139, 172);
+    background: linear-gradient(135deg, rgba(140, 139, 172, 1) 1%, rgba(227, 207, 71, 1) 27%, rgba(223, 204, 119, 1) 92%);
+}
+
+.App > div {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    background: transparent;
+}
+
+::selection {
+    background-color: rgb(248, 232, 190);
+}
+
+/*******************Comments**********************************************/
+div.comments {
+    overflow-y: auto;
+    height: 500px;
+    padding: 20px 0;
+    gap: 40px;
+    z-index: 1;
+    width: 100%;
+    align-items: center;
+    background: transparent;
+}
+
+
+/*******************Comment**********************************************/
+div.comment {
+    position: relative;
+    gap: 0;
+    width: 65%;
+    background: rgb(249, 237, 133);
+    border: 1px solid rgb(249, 237, 133);
+}
+
+.comment .body {
+    font-size: 13px;
+    padding: 15px;
+}
+
+.comment .initials {
+    position: absolute;
+    min-height: initial;
+    width: 50px;
+    height: 50px;
+    top: -30px;
+    left: -30px;
+    border: 1px solid rgb(190, 149, 42);
+    border-radius: 50%;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    background-color: rgb(190, 149, 42);
+    z-index: 3;
+}
+
+.initials span {
+    font-size: 20px;
+    color: white;
+}
+
+.comment h5 {
+    position: absolute;
+    top: -17px;
+    left: 0;
+    border: 1px solid rgb(190, 149, 42);
+    background-color: rgb(190, 149, 42);
+    margin: 0;
+    padding: 7px 7px 7px 30px;
+    width: fit-content;
+    min-width: 120px;
+    z-index: 2;
+}
+
+.comment div {
+    position: relative;
+}
+
+.comment button {
+    position: absolute;
+    top: -11px;
+    right: -11px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgb(190, 149, 42);
+    background-color: rgb(190, 149, 42);
+}
+
+/*******************newComments**********************************************/
+div.newComment {
+    position: relative;
+}
+
+.newComment button {
+    border: 1px solid rgb(80, 41, 41);
+    cursor: pointer;
+    display: flex;
+    width: fit-content;
+    background-color: rgb(80, 41, 41);
+    color: white;
+    position: absolute;
+    bottom: -15px;
+    right: -25px;
+    padding: 7px 15px;
+    font-size: 14px;
+    box-shadow: 6px 6px 8px -2px rgba(0, 0, 0, 0.52);
+}
+
+textarea {
+    height: 70px;
+    border: 1px solid rgb(80, 41, 41);
+    padding: 7px;
+    resize: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+textarea:focus {
+    outline: none;
+    border: 2px solid rgb(80, 41, 41);
+}
